@@ -82,8 +82,8 @@ async function fetchData() {
     console.error(error);
     statusElement.setAttribute('aria-busy', 'false');
     statusElement.innerText = "❌ Erreur : Impossible de contacter l'API.";
-    statusElement.style.color = "#e74c3c"; // Rouge
-    // On ajoute une classe d'erreur visuelle si besoin
+    statusElement.style.color = "#e74c3c"; 
+ 
   }
 }
 

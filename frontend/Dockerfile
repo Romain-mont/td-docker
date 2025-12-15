@@ -7,7 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-# Cette commande crée un dossier "dist" avec les fichiers optimisés
+
 RUN npm run build
 
 # --- Étape 2 : Serveur Nginx ---

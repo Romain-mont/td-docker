@@ -33,5 +33,4 @@ docker compose up -d
 echo "----------------------------------------------------"
 echo "✅ Déploiement terminé avec succès !"
 echo "🌐 Frontend accessible sur : http://localhost:8080"
-echo "🔌 API accessible sur      : http://localhost:3000/status"
 echo "----------------------------------------------------"

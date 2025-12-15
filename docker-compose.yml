@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:15-alpine
     container_name: projet-db
-    # On charge les variables depuis le fichier .env
+
     env_file:
       - .env
     volumes:
@@ -12,7 +12,6 @@ services:
     networks:
       - app-network
     healthcheck:
-      # On utilise les variables $VAR ici aussi pour être cohérent
       test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER -d $POSTGRES_DB"]
       interval: 5s
       timeout: 5s
@@ -25,12 +24,12 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    # Ici, on mappe les variables du .env vers les variables attendues par Node
+
     environment:
       - PORT=${PORT}
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
-      - DB_USER=${POSTGRES_USER} # On réutilise la variable définie pour Postgres
+      - DB_USER=${POSTGRES_USER}
       - DB_PASSWORD=${POSTGRES_PASSWORD}
       - DB_NAME=${POSTGRES_DB}
     networks:
