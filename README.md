@@ -111,7 +111,7 @@ Une fois les services démarrés :
 | Service | Image | Port | Description |
 |---------|-------|------|-------------|
 | `frontend` | nginx:alpine | 8080 | Interface utilisateur + Reverse Proxy |
-| `api` | node:18-alpine | - | API REST (non exposé) |
+| `api` | node:20-alpine | - | API REST (non exposé) |
 | `db` | postgres:15-alpine | - | Base de données (non exposée) |
 
 ---
@@ -204,7 +204,7 @@ td-docker/
 - **Nginx Alpine** - Serveur web léger
 
 ### Backend
-- **Node.js 18** - Runtime JavaScript
+- **Node.js 20** - Runtime JavaScript
 - **Express** - Framework web
 - **pg** - Client PostgreSQL
 - **Alpine Linux** - Image de base légère
